@@ -1,0 +1,11 @@
+{
+  "books": [
+    { "id": 1, "isbn": "978-83-60505-53-3", "name": "Księżniczka", "authorId": 1, "publisherId": 1, "publishInfo": "Lublin 2007", "pages": 295 }
+  ],
+  "publishers": [
+    { "id": 1, "name": "Fabryka słów", "address": "Fabryka Słów sp. z o.o., 20-111 Lublin, Rynek 2" }
+  ],
+  "authors": [
+    { "id": 1, "firstName": "Andrzej", "lastName": "Pilipiuk" }
+  ]
+}

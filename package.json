@@ -5,10 +5,11 @@
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run server | ng serve",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "server": "node ./node_modules/json-server/bin ./server/database.json --watch --port 3001"
   },
   "private": true,
   "dependencies": {
@@ -33,11 +34,12 @@
     "codelyzer": "~2.0.0-beta.1",
     "jasmine-core": "2.5.2",
     "jasmine-spec-reporter": "2.5.0",
+    "json-server": "^0.9.5",
     "karma": "1.2.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-cli": "^1.0.1",
-    "karma-jasmine": "^1.0.2",
     "karma-coverage-istanbul-reporter": "^0.2.0",
+    "karma-jasmine": "^1.0.2",
     "protractor": "~5.1.0",
     "ts-node": "1.2.1",
     "tslint": "^4.3.0",
