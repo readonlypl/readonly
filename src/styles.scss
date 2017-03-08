@@ -1,0 +1,41 @@
+@import './styles/variables.scss';
+@import './styles/icons.scss';
+
+html, body, .app {
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    display: flex;
+}
+
+.content {
+    height: 100%;
+    min-height: 100%;
+    width: calc(100% - #{$sidebarItemHeight});
+    background: $mainBackground;
+}
+
+.header {
+  height: $sidebarItemHeight;
+
+  h1 {
+    background: $mainColorPrimary;
+    color: $mainColorBright;
+    display: inline-block;
+    font-size: 18px;
+    line-height: $sidebarItemHeight;
+    text-align: center;
+    height: $sidebarItemHeight;
+    width: 100%;
+    margin: 0;
+
+    .material-icons {
+      font-size:14px;
+    }
+  }
+
+}
