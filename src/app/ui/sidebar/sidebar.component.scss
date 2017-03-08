@@ -1,0 +1,22 @@
+@import './../../../styles/variables.scss';
+
+.sidebar {
+    width: $sidebarItemHeight;
+    min-width: $sidebarItemHeight;
+    height: 100%;
+    min-height: 100%;
+    background: $sidebarBackground;
+    position: relative;
+    z-index: 1000;
+
+    .item {
+      display: inline-block;
+      width: 100%;
+      height: $sidebarItemHeight;
+      line-height: $sidebarItemHeight;
+      font-size: 14px;
+      text-align: center;
+      color: $sidebarColor;
+      border-bottom: 1px solid $sidebarDividerColor;
+    }
+}
