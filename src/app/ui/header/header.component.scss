@@ -1,0 +1,52 @@
+@import './../../../styles/variables.scss';
+
+.header {
+  display: flex;
+
+  h1 {
+    height: $sidebarItemHeight;
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+
+.page-header {
+  flex: 0.4;
+  background: $mainColorPrimary;
+
+  h1 {
+    line-height: $sidebarItemHeight;
+    text-align: center;
+    color: #fff;
+  }
+
+  i {
+    vertical-align: text-bottom;
+  }
+}
+
+.app-header {
+  flex: 1;
+  display: flex;
+
+  h1 {
+    flex: 0.9;
+    line-height: $sidebarItemHeight;
+    text-align: center;
+  }
+
+  nav {
+    line-height: $sidebarItemHeight;
+    flex: 0.1;
+    text-align: right;
+  }
+
+  a {
+    vertical-align: sub;
+  }
+
+  i {
+    vertical-align: middle;
+  }
+}
+
