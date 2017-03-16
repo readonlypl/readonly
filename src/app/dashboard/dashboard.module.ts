@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { DashboardRoutes } from './dashboard.routing';
+
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    DashboardRoutes
   ],
   declarations: []
 })

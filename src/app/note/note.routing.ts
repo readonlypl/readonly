@@ -4,4 +4,4 @@ const routes: Routes = [
   {  },
 ];
 
-export const NotesRoutes = RouterModule.forChild(routes);
+export const NoteRoutes = RouterModule.forChild(routes);
