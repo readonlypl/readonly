@@ -5,7 +5,11 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { UiModule } from './ui';
+import { BookModule } from './book';
+import { LibraryModule } from './library';
+import { AppRoutes } from './app.routing';
 import { AppComponent } from './app.component';
+
 
 @NgModule({
   declarations: [
@@ -15,8 +19,10 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot([]),
-    UiModule
+    AppRoutes,
+    UiModule,
+    BookModule,
+    LibraryModule
   ],
   providers: [],
   bootstrap: [AppComponent]
