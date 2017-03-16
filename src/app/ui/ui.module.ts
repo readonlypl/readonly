@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import { HeaderComponent } from './header/header.component';
   ],
   declarations: [
     SidebarComponent,
-    HeaderComponent
+    HeaderComponent,
+    PageNotFoundComponent
   ],
   exports: [
     SidebarComponent,
