@@ -1,3 +1,10 @@
-<p>
-  book-list works!
-</p>
+<div class="book__tiles">
+
+  <div
+    *ngFor="let book of books"
+    class="book__tile"
+  >
+    {{ book.title }}
+  </div>
+
+</div>
