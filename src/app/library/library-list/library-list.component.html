@@ -1,3 +1,43 @@
-<p>
-  library-list works!
-</p>
+<div class="library">
+  <div class="library__tiles">
+    <div
+      *ngFor="let library of libraries"
+      class="library__tile"
+      (click)="selectLibrary(library)"
+      [ngClass]="{ 'library__tile--selected': library === selectedLibrary }"
+    >
+      <div class="library__name">
+        {{ library.name }}
+      </div>
+    </div>
+    <div
+      (click)="addFormVisibility = !addFormVisibility"
+      class="library__tile library__tile--new"
+    >
+      <i class="material-icons">add</i>
+      <span>Dodaj bibliotekę</span>
+    </div>
+
+    <div
+      *ngIf="addFormVisibility"
+      class="library__tile library__form"
+    >
+      <form [formGroup]="libraryForm">
+        <label>
+          Nazwa biblioteki
+        </label>
+        <input type="text" formControlName="name" />
+        <button
+          type="submit"
+          (click)="saveLibrary()"
+        >
+          Dodaj
+        </button>
+      </form>
+    </div>
+
+  </div>
+  <div class="library__table">
+
+  </div>
+</div>

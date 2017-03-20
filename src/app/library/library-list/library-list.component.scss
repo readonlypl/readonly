@@ -1,0 +1,55 @@
+@import './../../../styles/variables.scss';
+
+.library {
+
+  display: flex;
+
+  &__tiles {
+    flex: 0.3;
+  }
+
+  &__name {
+    padding-bottom: 4px;
+    border-bottom: 2px solid #477b83;
+  }
+
+  &__tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 50%;
+    height: 15vh;
+    margin: 0;
+    padding: 0;
+    border: 1px solid $boxBorderColor;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &--selected {
+      color: #fff;
+      background: #1f3a43;
+      border-color: #1f3a43;
+    }
+
+    &--new {
+      color: #8e334a;
+
+      span {
+        clear: both;
+        width: 100%;
+      }
+    }
+  }
+
+  &__table {
+    flex: 1;
+  }
+
+  &__form {
+    width: 100%;
+    clear: both;
+    cursor: auto;
+  }
+
+}
