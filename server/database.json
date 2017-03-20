@@ -3,9 +3,27 @@
     {
       "id": 1,
       "isbn": "978-83-60505-53-3",
-      "name": "Księżniczka",
+      "title": "Księżniczka",
       "authorId": 1,
       "publisherId": 1,
+      "publishInfo": "Lublin 2007",
+      "pages": 295
+    },
+    {
+      "id": 2,
+      "isbn": "978-83-7574-653-2",
+      "title": "Aparatus",
+      "authorId": 1,
+      "publisherId": 1,
+      "publishInfo": "Lublin 2011",
+      "pages": 395
+    },
+    {
+      "id": 3,
+      "isbn": "978-83-60505-53-3",
+      "title": "Wiedźmin. Czas pogardy",
+      "authorId": 2,
+      "publisherId": 2,
       "publishInfo": "Lublin 2007",
       "pages": 295
     }
@@ -15,6 +33,11 @@
       "id": 1,
       "name": "Fabryka słów",
       "address": "Fabryka Słów sp. z o.o., 20-111 Lublin, Rynek 2"
+    },
+    {
+      "id": 1,
+      "name": "superNOWA",
+      "address": "Niezależna Oficyna Wydawnicza NOWA sp. z o.o., ul Nowowiejska 10/12, 00-653 Warszawa"
     }
   ],
   "authors": [
@@ -22,6 +45,11 @@
       "id": 1,
       "firstName": "Andrzej",
       "lastName": "Pilipiuk"
+    },
+    {
+      "id": 2,
+      "firstName": "Andrzej",
+      "lastName": "Sapkowski"
     }
   ],
   "libraries": [
@@ -33,5 +61,11 @@
       "id": 2,
       "name": "Firmowa"
     }
+  ],
+  "books-to-libraries": [
+    { "bookId": 1, "libraryId": 1 },
+    { "bookId": 2, "libraryId": 1 },
+    { "bookId": 3, "libraryId": 1 },
+    { "bookId": 2, "libraryId": 2 }
   ]
 }
