@@ -1,0 +1,28 @@
+.book {
+
+  &__tiles {
+    display: flex;
+  }
+
+  &__tile {
+    flex: 0.33;
+    padding: 3em;
+    margin: 25px;
+    min-height: 10vh;
+    background: #fbfbfb;
+    box-shadow: 0px 3px 6px 0px rgba(224,224,224,1);
+  }
+
+  &__title {
+    font-style: italic;
+    width: 100%;
+    clear: both;
+  }
+
+  &__author {
+    color: #819699;
+    width: 100%;
+    clear: both;
+  }
+
+}
