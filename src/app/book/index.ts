@@ -1,1 +1,1 @@
-export { BookModule } from './book.module';
+export * from './book.module';

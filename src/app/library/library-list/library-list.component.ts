@@ -3,20 +3,19 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 
 import { LibraryRepository } from './../library.repository';
 import { Library } from './../library.model';
+import { slideLeftAnimation } from './../../ui';
 
 @Component({
   selector: 'app-library-list',
   templateUrl: './library-list.component.html',
-  styleUrls: ['./library-list.component.scss']
+  styleUrls: ['./library-list.component.scss'],
+  animations: [ slideLeftAnimation ]
 })
 export class LibraryListComponent implements OnInit {
 
   public libraries: Array<Library> = [];
   public selectedLibrary: Library = null;
   public addFormVisibility: boolean = false;
-  public libraryForm: FormGroup = this.formBuilder.group({
-    name: ''
-  });
 
   constructor(
     private formBuilder: FormBuilder,
@@ -31,18 +30,9 @@ export class LibraryListComponent implements OnInit {
     this.selectedLibrary = library;
   }
 
-  public saveLibrary() {
-    if (!this.libraryForm.valid) {
-      return;
-    }
-
-    const library: Library = new Library(null, this.libraryForm.controls['name'].value);
-
-    this.libraryRepository.create(library)
-    .subscribe(() => {
-      this.fetchLibraries();
-      this.libraryForm.reset();
-    });
+  public refreshList(library: Library) {
+    this.selectLibrary(library);
+    this.fetchLibraries();
   }
 
   private fetchLibraries() {

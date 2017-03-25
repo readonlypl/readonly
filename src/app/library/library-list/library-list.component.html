@@ -1,43 +1,41 @@
 <div class="library">
-  <div class="library__tiles">
+  <div class="sidebar-menu">
     <div
       *ngFor="let library of libraries"
-      class="library__tile"
+      class="sidebar-menu__tile"
       (click)="selectLibrary(library)"
-      [ngClass]="{ 'library__tile--selected': library === selectedLibrary }"
+      [ngClass]="{ 'library__tile--selected': library.id === selectedLibrary.id }"
     >
-      <div class="library__name">
+      <div class="sidebar-menu__name">
         {{ library.name }}
       </div>
     </div>
     <div
       (click)="addFormVisibility = !addFormVisibility"
-      class="library__tile library__tile--new"
+      class="sidebar-menu__tile sidebar-menu__tile--new"
     >
-      <i class="material-icons">add</i>
-      <span>Dodaj bibliotekę</span>
+      <i class="material-icons icon--bordered">add</i>
+      <span>Dodaj<br>bibliotekę</span>
     </div>
 
     <div
       *ngIf="addFormVisibility"
-      class="library__tile library__form"
+      [@slideLeft]="addFormVisibility"
+      class="sidebar-menu__form"
     >
-      <form [formGroup]="libraryForm">
-        <label>
-          Nazwa biblioteki
-        </label>
-        <input type="text" formControlName="name" />
-        <button
-          type="submit"
-          (click)="saveLibrary()"
-        >
-          Dodaj
-        </button>
-      </form>
+      <app-library-form
+        (onSave)="refreshList($event)"
+      >
+      </app-library-form>
     </div>
 
   </div>
   <div class="library__table">
+    <header class="page-header">
+      <h1>
+        <i class="material-icons">import_contacts</i> Biblioteki
+      </h1>
+    </header>
     <app-book-list
       [library]="selectedLibrary"
     >

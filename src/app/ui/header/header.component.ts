@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Header } from './header.model';
+import { heightSlideDownAnimation } from './../animations';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  animations: [ heightSlideDownAnimation ]
 })
 export class HeaderComponent implements OnInit {
 
-  public header: Header = new Header('Biblioteki', 'import_contacts');
+  public showBookForm: boolean = false;
 
   constructor() { }
 

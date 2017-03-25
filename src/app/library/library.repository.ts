@@ -27,7 +27,9 @@ export class LibraryRepository {
     return this.http.post(
       environment.apiUrl + 'libraries',
       library
-    );
+    )
+    .map((response) => new Library(response.json().id, response.json().name))
+    ;
   }
 
 }

@@ -1,52 +1,100 @@
-@import './../../../styles/variables.scss';
+@import '~styles/variables.scss';
+
+$inputColor: #B7C0C4;
 
 .header {
+  position: relative;
+  z-index: 2;
   display: flex;
+  height: $headerHeight;
+  background: $mainBackground;
+  box-shadow: 0 3px 5px 0 rgba(222,222,222,0.75);
 
-  h1 {
-    height: $sidebarItemHeight;
+  &__menu-toggle {
+    width: $sidebarItemHeight;
+    height: $headerHeight;
+    background: $sidebarBackground;
+    text-align: center;
+    line-height: $headerHeight;
+  }
+
+  &__app {
+    flex: 0.4;
+    display: block;
+    margin: 0;
+    height: $headerHeight;
+    line-height: $headerHeight;
     font-size: 18px;
     font-weight: normal;
-  }
-}
-
-.page-header {
-  flex: 0.3;
-  background: $mainColorPrimary;
-
-  h1 {
-    line-height: $sidebarItemHeight;
     text-align: center;
-    color: #fff;
+    background: $sidebarBackground;
+    border-right: 1px solid $sidebarDividerColor;
+
+    img {
+      vertical-align: middle;
+    }
   }
 
-  i {
-    vertical-align: text-bottom;
+  &__search {
+    flex: 0.8;
+    height: $headerHeight;
+    line-height: $headerHeight;
+    margin-left: 25px;
+    color: $inputColor;
+
+    .input-field {
+      margin-top: -5px;
+    }
+
+    input {
+      border-color: $inputColor;
+    }
+
+    .prefix {
+      top: 40%;
+    }
   }
-}
 
-.app-header {
-  flex: 1;
-  display: flex;
-
-  h1 {
-    flex: 0.9;
-    line-height: $sidebarItemHeight;
+  &__nav {
+    flex: 0.5;
+    height: $headerHeight;
+    line-height: $headerHeight;
     text-align: center;
-  }
 
-  nav {
-    line-height: $sidebarItemHeight;
-    flex: 0.1;
-    text-align: right;
-  }
+    .btn {
+      width: 60%;
+      height: auto;
+      padding: 5px;
+      border-radius: 20px;
+      text-transform: none;
+      font-size: 14px;
 
-  a {
-    vertical-align: sub;
-  }
+      i {
+        color: $mainColorBright;
+        vertical-align: sub;
+      }
+    }
 
-  i {
-    vertical-align: middle;
+    a {
+      vertical-align: sub;
+    }
+
+    i {
+      vertical-align: middle;
+      color: $mainColorPrimary;
+    }
   }
 }
 
+.book-form-container {
+  position: relative;
+  z-index: 1;
+  background: $sidebarBackground;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+
+  &.opened {
+    height: auto;
+  }
+}

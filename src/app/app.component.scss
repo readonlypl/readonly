@@ -1,5 +1,19 @@
-@import './../styles/variables.scss';
+@import '~styles/variables.scss';
 
-h1 {
-  color: $mainColor;
+.app {
+    display: block;
+}
+
+.content-wrapper {
+  display: flex;
+  min-height: calc(100% - #{$headerHeight});
+
+  app-sidebar {
+    width: $sidebarItemHeight;
+    min-height: 100%;
+  }
+
+  .content {
+    width: calc(100% - #{$sidebarItemWidth});
+  }
 }

@@ -6,6 +6,7 @@ import { BookModule } from './../book';
 import { LibraryRoutes } from './library.routing';
 import { LibraryListComponent } from './library-list/library-list.component';
 import { LibraryRepository } from './library.repository';
+import { LibraryFormComponent } from './library-form/library-form.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { LibraryRepository } from './library.repository';
     LibraryRoutes
   ],
   declarations: [
-    LibraryListComponent
+    LibraryListComponent,
+    LibraryFormComponent
   ],
   providers: [
     LibraryRepository

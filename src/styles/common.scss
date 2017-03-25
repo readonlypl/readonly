@@ -1,0 +1,92 @@
+@import '~styles/variables.scss';
+
+.btn {
+  background: $mainColorPrimary;
+
+  &:hover {
+    background: lighten($mainColorPrimary, 10);
+  }
+  &:focus {
+    background: darken($mainColorPrimary, 10);
+  }
+}
+
+.page-header {
+  height: $sidebarItemHeight * 2;
+
+  h1 {
+    display: inline-block;
+    width: 95%;
+    height: $sidebarItemHeight * 2;
+    line-height: $sidebarItemHeight * 2;
+    margin: 0 0 0 25px;
+    font-size: 35px;
+    border-bottom: 1px solid $sidebarDividerColor;
+  }
+
+}
+
+.sidebar-menu {
+  flex: 0.3;
+
+  &__name {
+    padding-bottom: 4px;
+    border-bottom: 2px solid $mainBorderColorSecondary;
+  }
+
+  &__tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 50%;
+    height: $sidebarItemHeight * 2;
+    margin: 0;
+    padding: 0;
+    border: 1px solid $boxBorderColor;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background $animationSpeed, color $animationSpeed, border-color $animationSpeed;
+
+    &--selected, &:hover {
+      color: $mainColorBright;
+      background: $mainColorSecondary;
+      border-color: $mainColorSecondary;
+    }
+
+    &--new {
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 13px;
+      flex-direction: column;
+      color: $mainColorPrimary;
+
+      i {
+        display: block;
+        clear: both;
+      }
+
+      span {
+        clear: both;
+        width: 100%;
+      }
+
+      &:hover {
+        background: $mainColorPrimary;
+        color: $mainColorBright;
+
+        i {
+          border-color: $mainColorBright;
+        }
+      }
+    }
+  }
+
+  &__form {
+    width: 100%;
+    padding: 20px;
+    clear: both;
+    cursor: auto;
+    background: $sidebarBackground;
+  }
+}
