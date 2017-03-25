@@ -3,11 +3,13 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 
 import { LibraryRepository } from './../library.repository';
 import { Library } from './../library.model';
+import { slideLeftAnimation } from './../../ui';
 
 @Component({
   selector: 'app-library-list',
   templateUrl: './library-list.component.html',
-  styleUrls: ['./library-list.component.scss']
+  styleUrls: ['./library-list.component.scss'],
+  animations: [ slideLeftAnimation ]
 })
 export class LibraryListComponent implements OnInit {
 

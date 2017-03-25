@@ -1,14 +1,17 @@
+$bookTileHeight: 160px;
+
 .book {
 
   &__tiles {
-    display: flex;
+    width: 100%;
   }
 
   &__tile {
-    flex: 0.33;
+    width: 25%;
+    height: $bookTileHeight;
+    float: left;
     padding: 3em;
-    margin: 25px;
-    min-height: 10vh;
+    margin: 2%;
     background: #fbfbfb;
     box-shadow: 0px 3px 6px 0px rgba(224,224,224,1);
   }

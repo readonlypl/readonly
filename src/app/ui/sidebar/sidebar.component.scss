@@ -1,4 +1,4 @@
-@import './../../../styles/variables.scss';
+@import '~styles/variables.scss';
 
 .sidebar {
     width: $sidebarItemHeight;
@@ -19,16 +19,11 @@
       color: $sidebarColor;
       border-bottom: 1px solid $sidebarDividerColor;
       cursor: pointer;
-      transition: background 0.5s, color 0.5s;
+      transition: background $animationSpeed, color $animationSpeed;
 
       &.active, &:hover {
         background: $mainColorPrimary;
         color: $mainColorBright;
-      }
-
-      &:first-child {
-        height: $sidebarFirstItemHeight;
-        line-height: $sidebarFirstItemHeight
       }
     }
 }

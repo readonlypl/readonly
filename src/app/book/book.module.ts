@@ -19,7 +19,8 @@ import { BookFormComponent } from './book-form/book-form.component';
     BookRepository
   ],
   exports: [
-    BookListComponent
+    BookListComponent,
+    BookFormComponent
   ]
 })
 export class BookModule { }

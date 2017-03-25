@@ -46,7 +46,7 @@
     border: 1px solid $boxBorderColor;
     box-sizing: border-box;
     cursor: pointer;
-    transition: background 0.5s, color 0.5s, border-color 0.5s;
+    transition: background $animationSpeed, color $animationSpeed, border-color $animationSpeed;
 
     &--selected, &:hover {
       color: $mainColorBright;

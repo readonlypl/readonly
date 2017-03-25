@@ -1,4 +1,13 @@
 <header class="header">
+  <div class="header__menu-toggle">
+    <a
+      href=""
+      class="item"
+    >
+      <i class="material-icons">menu</i>
+    </a>
+  </div>
+
   <h1 class="header__app">
     <img src="/assets/images/logo.png" alt="readonly.pl">
   </h1>
@@ -14,7 +23,10 @@
     </div>
   </div>
   <div class="header__nav">
-    <button class="waves-effect waves-light btn">
+    <button
+      (click)="showBookForm = !showBookForm"
+      class="waves-effect waves-light btn"
+    >
       <i class="material-icons">note_add</i> Dodaj książkę
     </button>
     <a href="">
@@ -25,3 +37,13 @@
     </a>
   </div>
 </header>
+
+<div
+  class="book-form-container"
+  *ngIf="showBookForm"
+  [@heightSlideDown]="showBookForm"
+  [class.opened]="showBookForm"
+>
+  <app-book-form>
+  </app-book-form>
+</div>
