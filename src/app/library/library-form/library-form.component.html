@@ -1,0 +1,13 @@
+<form [formGroup]="libraryForm">
+  <label>
+    Nazwa biblioteki
+  </label>
+  <input type="text" formControlName="name" />
+  <button
+    type="submit"
+    class="btn"
+    (click)="saveLibrary()"
+  >
+    Dodaj
+  </button>
+</form>

@@ -14,9 +14,6 @@ export class LibraryListComponent implements OnInit {
   public libraries: Array<Library> = [];
   public selectedLibrary: Library = null;
   public addFormVisibility: boolean = false;
-  public libraryForm: FormGroup = this.formBuilder.group({
-    name: ''
-  });
 
   constructor(
     private formBuilder: FormBuilder,
@@ -31,18 +28,9 @@ export class LibraryListComponent implements OnInit {
     this.selectedLibrary = library;
   }
 
-  public saveLibrary() {
-    if (!this.libraryForm.valid) {
-      return;
-    }
-
-    const library: Library = new Library(null, this.libraryForm.controls['name'].value);
-
-    this.libraryRepository.create(library)
-    .subscribe(() => {
-      this.fetchLibraries();
-      this.libraryForm.reset();
-    });
+  public refreshList(library: Library) {
+    this.selectLibrary(library);
+    this.fetchLibraries();
   }
 
   private fetchLibraries() {

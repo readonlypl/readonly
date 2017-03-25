@@ -1,24 +1,27 @@
-<div class="header">
-  <header class="page-header">
-    <h1 *ngIf="header && header.title">
-      <i
-        *ngIf="header.icon"
-        class="material-icons"
+<header class="header">
+  <h1 class="header__app">
+    <img src="/assets/images/logo.png" alt="readonly.pl">
+  </h1>
+  <div class="header__search">
+    <div class="input-field">
+      <i class="material-icons prefix">search</i>
+      <input
+        name="bookSearch"
+        placeholder="Wyszukaj książkę..."
+        type="text"
+        class="validate"
       >
-        {{ header.icon }}
-      </i>
-      {{ header.title }}
-    </h1>
-  </header>
-  <header class="app-header">
-    <h1>ReadOnly</h1>
-    <nav>
-      <a href="">
-        <i class="material-icons">notifications</i>
-      </a>
-      <a href="">
-        <i class="material-icons">person</i>
-      </a>
-    </nav>
-  </header>
-</div>
+    </div>
+  </div>
+  <div class="header__nav">
+    <button class="waves-effect waves-light btn">
+      <i class="material-icons">note_add</i> Dodaj książkę
+    </button>
+    <a href="">
+      <i class="material-icons">notifications_none</i>
+    </a>
+    <a href="">
+      <i class="material-icons">person_outline</i>
+    </a>
+  </div>
+</header>
