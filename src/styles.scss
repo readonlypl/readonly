@@ -1,5 +1,7 @@
-@import './styles/variables.scss';
-@import './styles/icons.scss';
+@import '~materialize-css/dist/css/materialize.css';
+@import 'styles/variables.scss';
+@import 'styles/icons.scss';
+@import 'styles/common.scss';
 
 html, body, .app {
     height: 100%;
@@ -8,6 +10,10 @@ html, body, .app {
     padding: 0;
     color: #000;
     font-family: Roboto;
+}
+
+h1 {
+  color: #2d464e;
 }
 
 a {
